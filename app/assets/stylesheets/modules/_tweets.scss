@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  background-image: url("/images/back.png");
+  height: 800px;
+  background-size: cover;
+}
+
+.Title {
+  height: 120px;
+  padding: 0px 80px;
+}
+.Main {
+  height: 500px;
+  padding: 0px 80px;
+  &__box {
+    display: flex;
+    height: 500px;
+  }
+}
+
+.Side {
+  background-color: whitesmoke;
+  width: 250px;
+  &__bar {
+    .Login {
+      height: 100px;
+    }
+    &__name {
+    }
+  }
+}
+
+.Article {
+  width: calc(100vw - 600px);
+}
+
+.Calendar {
+  width: 350px;
+}

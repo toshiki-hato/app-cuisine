@@ -1,0 +1,8 @@
+.Post
+  .Post__form
+    = form_with model: [@tweet], html: {class: "Form__input"}, local: true do |f|
+      献立を書く
+      .Input
+        = f.text_field :content, class: 'Input__text',placeholder: '献立のタイトル'
+        = f.text_field :content, class: 'Input__text',placeholder: 'type a message'
+        = f.submit 'Send', class:'Input__btn'
