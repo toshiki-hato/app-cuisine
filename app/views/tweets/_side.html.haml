@@ -1,6 +1,8 @@
 .Side
   .Side__bar
-    .Login ログイン画面
+    .Login
+      = link_to edit_user_path(current_user) do
+        ログイン画面
     %p.Side__bar__name レシピ関連サービス
     %ul.List
       %li.List__movie 料理動画
