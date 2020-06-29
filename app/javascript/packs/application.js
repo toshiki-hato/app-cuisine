@@ -7,6 +7,8 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require('bootstrap/dist/js/bootstrap.min.js')
+// = require bootstrap/dist/css/bootstrap.min.css
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -15,3 +17,8 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+import 'bootstrap';
+import '../stylesheets/application';
+import '@fortawesome/fontawesome-free/js/all'
+require("bootstrap");
+require("@fortawesome/fontawesome-free");

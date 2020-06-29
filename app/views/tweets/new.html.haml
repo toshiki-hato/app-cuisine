@@ -1,11 +1,14 @@
-.Post
-  記載ページ
-  .Post__form
-    = form_with model: @tweet, html: {class: "Post__form__input"}, local: true do |f|
-      .Input
-        = f.text_field :content, class: 'Input__title',placeholder: '献立のタイトル'
-        = f.text_field :content, class: 'Input__text',placeholder: 'type a message'
-        = f.label :image, class: 'Input__image' do
-          -# = icon('far','image', class: 'icon')
-          = f.file_field :image, class: 'file'
-        = f.submit 'Send', class:'Input__btn'
+.wrapper
+  = render "title_bar"
+  .Post
+    .Post__form
+      = form_with model: @tweet, html: {class: "Post__form__input"}, local: true do |f|
+        .Input
+          .Input__title
+            = f.text_field :content, class: 'Input__title',placeholder: '献立のタイトル'
+          .Input__article
+            = f.file_field :image, class: 'file-box'
+            = f.text_field :content, class: 'Input__text',placeholder: 'type a message'
+            -# = f.label :image, class: 'Input__image' do
+            -#   -# = icon('far','image', class: 'icon')
+          = f.submit 'Send', class:'Input__btn'
