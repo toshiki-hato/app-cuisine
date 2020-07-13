@@ -13,5 +13,17 @@
     = link_to new_tweet_path(@tweets), class: "Ranking" do
       <i class="fas fa-chess-queen"></i>
       レシピランキング
-    = link_to edit_user_path(current_user),class: "login-btn" do
-      ログイン画面
+    -# = link_to edit_user_path(current_user),class: "login-btn" do
+    -#   ログイン画面
+    - if user_signed_in?
+      %ul.Userlist
+        %li.Userlist__login
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+        %li.Userlist__new
+          = link_to  " 献立を書く", new_tweet_path(@tweets), class: "post", "turbolinks": false
+    - else
+      %ul.Userlist
+        %li.Userlist__login
+          = link_to "ログイン", new_user_session_path, class: "post"
+        %li.Userlist__new
+          = link_to "新規登録", new_user_registration_path, class: "post"
