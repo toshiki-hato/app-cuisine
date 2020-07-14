@@ -27,3 +27,16 @@
     -#       = link_to "ログイン", new_user_session_path, class: "post"
     -#     %li.Userlist__new
     -#       = link_to "新規登録", new_user_registration_path, class: "post"
+    - if user_signed_in?
+      .user_nav.grid-6
+        %span
+          = current_user.nickname
+          %ul.user__info
+            %li
+              = link_to "マイページ", "/users/#{current_user.id}"
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
+        = link_to "投稿する", new_tweet_path, class: "post"
+    - else
+      .grid-6
+        = link_to "ログイン", new_user_session_path, class: "post"
+        = link_to "新規登録", new_user_registration_path, class: "post"
