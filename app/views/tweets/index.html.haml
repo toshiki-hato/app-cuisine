@@ -1,7 +1,6 @@
 .wrapper
   = render "title_bar"
   = render "main_chat"
-
 .contents.row
   - @tweets.each do |tweet|
     .content_post{:style => "background-image: url(#{tweet.image});"}
