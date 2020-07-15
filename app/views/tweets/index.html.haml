@@ -22,3 +22,9 @@
           %span 投稿者
           = tweet.user.nickname
 
+- @tweets.each do |tweet|
+  = tweet.title
+  = tweet.text
+  = tweet.user.nickname
+  = image_tag tweet.image.url
+  
