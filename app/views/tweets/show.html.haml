@@ -13,6 +13,9 @@
       %a{:href => "/users/#{@tweet.user.id}"}
         %span 投稿者
         = @tweet.user.nickname
+    - if @post.image?
+      = image_tag @tweet.image.url
+
   .container
   - if current_user
     = form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |form|
