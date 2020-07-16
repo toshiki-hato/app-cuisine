@@ -1,6 +1,6 @@
-.wrapper
-  = render "title_bar"
-  = render "main_chat"
+= form_with(url: search_tweets_path, local: true, method: :get, class: "search-form") do |form|
+  = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
+  = form.submit "検索", class: "search-btn"
 .contents.row
   - @tweets.each do |tweet|
     .content_post{:style => "background-image: url(#{tweet.image});"}
@@ -21,13 +21,3 @@
         %a{:href => "/users/#{tweet.user.id}"}
           %span 投稿者
           = tweet.user.nickname
-
-- @tweets.each do |tweet|
-  = tweet.title
-  = tweet.text
-  = tweet.user.nickname
-  = image_tag tweet.image.url
-  
-= form_with(url: search_tweets_path, local: true, method: :get, class: "search-form") do |form|
-  = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
-  = form.submit "検索", class: "search-btn"

@@ -4,4 +4,8 @@ class Tweet < ApplicationRecord
   has_many :comments
 
   mount_uploader :image, ImageUploader
+  def self.search(search)
+    return Tweet.all unless search
+    Tweet.where('title LIKE(?)', "%#{search}%")
+  end
 end
