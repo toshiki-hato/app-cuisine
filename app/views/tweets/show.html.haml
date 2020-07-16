@@ -13,7 +13,7 @@
       %a{:href => "/users/#{@tweet.user.id}"}
         %span 投稿者
         = @tweet.user.nickname
-    - if @post.image?
+    - if @tweet.image?
       = image_tag @tweet.image.url
 
   .container
