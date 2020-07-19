@@ -1,0 +1,30 @@
+.Signin
+  .Top
+    .article
+      - @tweets.each do |tweet|
+        = link_to tweet_path(tweet.id) ,class: "details" do
+          = image_tag tweet.image.url
+          -# %br/
+          = tweet.title
+
+
+-# .contents.row
+-#   - @tweets.each do |tweet|
+-#     .content_post{:style => "background-image: url(#{tweet.image});"}
+-#       .more
+-#         %span= image_tag 'arrow_top.png'
+-#         %ul.more_list
+-#           %li
+-#             = link_to '詳細', tweet_path(tweet.id), method: :get
+-#           - if user_signed_in? && current_user.id == tweet.user_id
+-#             %li
+-#               = link_to '編集', edit_tweet_path(tweet.id), method: :get
+-#             %li
+-#               = link_to '削除', tweet_path(tweet.id), method: :delete
+
+-#       %p= tweet.text
+-#       %span.name
+-#         = tweet.title
+-#         %a{:href => "/users/#{tweet.user.id}"}
+-#           %span 投稿者
+-#           = tweet.user.nickname

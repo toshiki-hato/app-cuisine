@@ -1,30 +1,8 @@
 .wrapper
   = render "title_bar"
   = render "search-box"
-  = render "main_chat"
-.contents.row
-  - @tweets.each do |tweet|
-    .content_post{:style => "background-image: url(#{tweet.image});"}
-      .more
-        %span= image_tag 'arrow_top.png'
-        %ul.more_list
-          %li
-            = link_to '詳細', tweet_path(tweet.id), method: :get
-          - if user_signed_in? && current_user.id == tweet.user_id
-            %li
-              = link_to '編集', edit_tweet_path(tweet.id), method: :get
-            %li
-              = link_to '削除', tweet_path(tweet.id), method: :delete
-
-      %p= tweet.text
-      %span.name
-        = tweet.title
-        %a{:href => "/users/#{tweet.user.id}"}
-          %span 投稿者
-          = tweet.user.nickname
-
-- @tweets.each do |tweet|
-  = tweet.title
-  = tweet.text
-  = tweet.user.nickname
-  = image_tag tweet.image.url
+  .Signin
+    - if user_signed_in?
+      = render "signed_main"
+    - else 
+      = render "main_chat"
