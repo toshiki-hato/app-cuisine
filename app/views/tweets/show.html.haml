@@ -1,5 +1,10 @@
 .contents.row
-  .content_post{:style => "background-image: url(#{@tweet.image});"}
+  .content_post
+    = image_tag @tweet.image.url
+    %br
+    = @tweet.title
+    %br
+    = @tweet.text
     - if user_signed_in? && current_user.id == @tweet.user_id
       .more
         %span= image_tag 'arrow_top.png'
@@ -8,13 +13,19 @@
             = link_to '編集', edit_tweet_path(@tweet.id), method: :get
           %li
             = link_to '削除', tweet_path(@tweet.id), method: :delete
-    %p= @tweet.text
-    %span.name
-      %a{:href => "/users/#{@tweet.user.id}"}
-        %span 投稿者
-        = @tweet.user.nickname
-    - if @tweet.image?
-      = image_tag @tweet.image.url
+    -# %span.name
+    -#   %a{:href => "/users/#{@tweet.user.id}"}
+    -#     %span 投稿者
+    -#     = @tweet.user.nickname
+
+    -# - if @tweet.image?
+    -#   = image_tag @tweet.image.url
+    -# - @tweets.each do |tweet|
+    -#   = link_to tweet_path(tweet.id) ,class: "details" do
+    -#     = image_tag @tweet.image.url
+    -#     = tweet.title
+    -#     = tweet.text
+    -#     = tweet.user.nickname
 
   .container
   - if current_user
