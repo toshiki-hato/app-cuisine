@@ -6,3 +6,16 @@
       = render "signed_main"
     - else 
       = render "main_chat"
+
+  .trainings
+  =link_to "記録する", new_calendar_path ,class:"training-edit"
+  -# = month_calendar events: @calendars do |date,calendars|
+    = date.day
+    - calendars.each do |calendar|
+      =link_to calendar.title,calendar_path(calendar.id)
+  = link_to '日記をかく', new_calendar_path
+  -# = month_calendar events: @calendars do |date, calendars|
+  -#   = date.day
+  -#   - calendars.each do |calendar|
+  -#     %div
+  -#       = link_to calendar.title, calendar
