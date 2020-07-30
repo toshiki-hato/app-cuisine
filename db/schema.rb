@@ -17,8 +17,13 @@ ActiveRecord::Schema.define(version: 2020_07_25_055250) do
     t.text "content"
     t.datetime "start_time"
     t.bigint "user_id"
+    t.bigint "tweet_id"
+    t.string "tweet_title"
+    t.text "tweet_text"
+    t.string "tweet_image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["tweet_id"], name: "index_blogs_on_tweet_id"
     t.index ["user_id"], name: "index_blogs_on_user_id"
   end
 
@@ -52,5 +57,6 @@ ActiveRecord::Schema.define(version: 2020_07_25_055250) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "blogs", "tweets"
   add_foreign_key "blogs", "users"
 end
