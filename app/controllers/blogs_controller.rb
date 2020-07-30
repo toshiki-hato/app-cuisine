@@ -2,10 +2,11 @@ class BlogsController < ApplicationController
 
   def index
     @blogs = Blog.all
+    @tweets = Tweet.all
   end
-
   def new
     @blog = Blog.new
+    @tweet = Tweet.find(params[:id])
   end
 
   def show
@@ -14,11 +15,13 @@ class BlogsController < ApplicationController
 
   def create
     @blog = current_user.blogs.new(blog_parameter)
-    if @blog.save
+    @blog.save
       redirect_to blogs_path
-    else
-      redirect_to new_blog_path
-    end
+    # if @blog.save
+    #   redirect_to blogs_path
+    # else
+    #   redirect_to new_blog_path
+    # end
   end
 
   def destroy

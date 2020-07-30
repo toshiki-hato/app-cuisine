@@ -2,6 +2,9 @@
   .title
     = form.label :title
     = form.text_field :title
+    = @tweet.title
+    = @tweet.text
+    = image_tag @tweet.image.url
   .time
     = form.label :start_time
     = form.datetime_select :start_time

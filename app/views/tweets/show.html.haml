@@ -14,7 +14,7 @@
           %li
             = link_to '削除', tweet_path(@tweet.id), method: :delete
           %li
-            = link_to 'カレンダーに投稿する', new_blog_path
+            = link_to 'カレンダーに投稿する', new_blog_path(id: @tweet.id)
 
     -# %span.name
     -#   %a{:href => "/users/#{@tweet.user.id}"}
