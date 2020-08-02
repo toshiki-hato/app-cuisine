@@ -1,0 +1,8 @@
+= form_with(model: @blog, local: true) do |f|
+  .title
+    = f.text_field :title
+  .content
+    = f.label :content
+    = f.text_field :content
+  .submit
+    = f.submit
