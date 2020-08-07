@@ -1,13 +1,14 @@
-.contents.row
-  .content_post
-    = image_tag @tweet.image.url
+.Tweet-show
+  .Tweet-show-article
+    .Tweet-show-title
+      = @tweet.title
+    .Tweet-show-image
+      = image_tag @tweet.image.url,class: "Tweet-show-img"
     %br
-    = @tweet.title
-    %br
-    = @tweet.text
+    .Tweet-show-text
+      = @tweet.text
     - if user_signed_in? && current_user.id == @tweet.user_id
       .more
-        %span= image_tag 'arrow_top.png'
         %ul.more_list
           %li
             = link_to '編集', edit_tweet_path(@tweet.id), method: :get

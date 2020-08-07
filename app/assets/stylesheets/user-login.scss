@@ -1,11 +1,19 @@
+.Sign-up{
+  background-color: #f9f6f3;
+}
 .contents.row{
   width: 100%;
   .container{
+    background-color: white;
+    margin: 0px 80px 0px 80px;
     padding: 0px 200px;
     text-align:center;
   }
 }
 
 .field{
+  margin-top: 20px;
+}
+.actions{
   margin-top: 20px;
 }

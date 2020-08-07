@@ -4,40 +4,18 @@
     .Title__bar__name
       Cuisine
   .Title__menu
-    -# = link_to new_tweet_path, class: "article" do
-    -#   <i class="far fa-edit"></i>
-    -#   献立を書く
-    -# = link_to new_tweet_path, class: "movie" do
-    -#   <i class="fas fa-video"></i>
-    -#   料理動画
-    -# = link_to new_tweet_path, class: "Ranking" do
-    -#   <i class="fas fa-chess-queen"></i>
-    -#   レシピランキング
-    -# = link_to edit_user_path(current_user),class: "login-btn" do
-    -# -#   ログイン画面
-    -# - if user_signed_in?
-    -#   %ul.Userlist
-    -#     %li.Userlist__login
-    -#       = link_to "ログアウト", destroy_user_session_path, method: :delete
-    -#     %li.Userlist__new
-    -#       = link_to  " 献立を書く", new_tweet_path, class: "post", "turbolinks": false
-    -# - else
-    -#   %ul.Userlist
-    -#     %li.Userlist__login
-    -#       = link_to "ログイン", new_user_session_path, class: "post"
-    -#     %li.Userlist__new
-    -#       = link_to "新規登録", new_user_registration_path, class: "post"
     - if user_signed_in?
-      .user_nav.grid-6
+      .user_nav
         %span
           = current_user.nickname
-          %ul.user__info
-            %li
-              = link_to "マイページ", "/users/#{current_user.id}"
-              = link_to "ログアウト", destroy_user_session_path, method: :delete
-        = link_to "投稿する", new_tweet_path, class: "post"
-        = link_to "カレンダー表示", blogs_path, class: "post"
+          様
+        %ul.user__info
+          %li
+            = link_to "マイページ", "/users/#{current_user.id}"
+            = link_to "ログアウト", destroy_user_session_path, method: :delete
+            = link_to "投稿する", new_tweet_path, class: "post"
+            = link_to "カレンダー表示", blogs_path, class: "post"
     - else
-      .grid-6
-        = link_to "ログイン", new_user_session_path, class: "post"
-        = link_to "新規登録", new_user_registration_path, class: "post"
+      .New
+        = link_to "ログイン", new_user_session_path, class: "login"
+        = link_to "新規登録", new_user_registration_path, class: "sign-up"
