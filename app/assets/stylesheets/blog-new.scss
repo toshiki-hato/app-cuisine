@@ -1,0 +1,33 @@
+.blog-new{
+  padding: 0px 80px 0px 80px;
+  width: 100%;
+  background-color: #f9f6f3;
+}
+.blog-create{
+  background-color: white;
+  padding: 60px 0px 0px 0px ;
+  text-align: center;
+  color: #7f7f7f;
+  .carendar{
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+}
+.blog{
+  display: flex;
+  justify-content: space-evenly;
+}
+.title{
+  margin-bottom: 20px;
+}
+.time{
+  margin-bottom: 20px;
+}
+.content{
+  margin-bottom: 20px;
+}
+.submit{
+  margin: 60px 0px 0px 0px;
+  padding-bottom: 60px;
+
+}
