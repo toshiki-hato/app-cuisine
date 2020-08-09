@@ -17,11 +17,6 @@ class BlogsController < ApplicationController
     @blog = current_user.blogs.new(blog_parameter)
     @blog.save
       redirect_to blogs_path
-    # if @blog.save
-    #   redirect_to blogs_path
-    # else
-    #   redirect_to new_blog_path
-    # end
   end
 
   def destroy
@@ -46,7 +41,7 @@ class BlogsController < ApplicationController
   private
 
   def blog_parameter
-    params.require(:blog).permit(:title, :content, :start_time)
+    params.require(:blog).permit(:title, :content, :start_time, :user_id, :tweet_id)
   end
 
 end
