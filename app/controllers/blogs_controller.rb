@@ -15,7 +15,10 @@ class BlogsController < ApplicationController
 
   def create
     @blog = current_user.blogs.new(blog_parameter)
+    @tweet = Tweet.new(user_id: current_user.id, image: params[:image])
     @blog.save
+    @blog.tweet_id = @tweet.id
+    @tweet.save
       redirect_to blogs_path
   end
 
