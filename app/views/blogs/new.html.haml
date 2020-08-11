@@ -1,15 +1,31 @@
-= form_with(model: @blog, local: true) do |form|
-  .title
-    = form.label :title
-    = form.text_field :title
-    = @tweet.title
-    = @tweet.text
-    = image_tag @tweet.image.url
-  .time
-    = form.label :start_time
-    = form.datetime_select :start_time
-  .content
-    = form.label :content
-    = form.text_field :content
-  .submit
-    = form.submit
+.blog-new
+  .blog-create
+    .carendar カレンダー投稿画面
+    = form_with(model: @blog, local: true) do |form|
+      .blog
+        .blog-new-create
+          .title
+            = form.label :タイトル
+            %br/
+            = form.text_field :title
+          .time
+            = form.label :日付_時間
+            %br/
+            = form.datetime_select :start_time
+          .content
+            = form.label :content
+            %br/
+            = form.text_field :content
+        .blog-tweet
+          .blog-tweet-image
+            = image_tag @tweet.image.url
+          %br/
+          .blog-tweet-title
+            = @tweet.title
+          %br/
+          .blog-tweet-title
+            = @tweet.text
+      .submit
+        = form.submit
+      .link-return
+        = link_to 'トップページに戻る', tweets_path

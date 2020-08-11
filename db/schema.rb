@@ -18,9 +18,6 @@ ActiveRecord::Schema.define(version: 2020_07_25_055250) do
     t.datetime "start_time"
     t.bigint "user_id"
     t.bigint "tweet_id"
-    t.string "tweet_title"
-    t.text "tweet_text"
-    t.string "tweet_image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["tweet_id"], name: "index_blogs_on_tweet_id"

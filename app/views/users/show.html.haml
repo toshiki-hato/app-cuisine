@@ -1,8 +1,19 @@
-.contents.row
-  %p
-    = @nickname
-    さんの投稿一覧
-  - @tweets.each do |tweet|
-    .content_post{:style => "background-image: url(#{tweet.image});"}
-      %p= tweet.text
-      %span.name= tweet.title
+.wrapper
+  = render "tweets/title_bar"
+  = render "tweets/search-box"
+
+  .Mypage
+    .nickname-mypsge
+      = @nickname
+      さんの投稿一覧
+    .user-index
+      .images
+        - @tweets.each do |tweet|
+          .article
+            = link_to tweet_path(tweet.id) ,class: "article-link" do
+              = image_tag tweet.image.url,class: "article-uplord-image"
+              %br/
+              .article-title
+                = tweet.title
+    .Toppage-link
+      = link_to "トップページへ戻る", tweets_path, class: "tweets_path"

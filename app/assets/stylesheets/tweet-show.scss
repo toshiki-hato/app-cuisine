@@ -1,0 +1,71 @@
+.Tweet-show{
+  padding: 0px 80px 0px 80px;
+  width: 100%;
+  background-color:#f9f6f3 ;
+}
+.Tweet-show-article{
+  padding-top: 100px;
+  height: 850px;
+  text-align: center;
+  background-color: white;
+}
+
+.Tweet-show-title{
+  color: #7f7f7f;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.Tweet-show-image{
+
+}
+.Tweet-show-img{
+  width: 400px;
+}
+.Tweet-show-text{
+  color: #7f7f7f;
+}
+
+.more{
+  ul{
+    li{
+    margin-top: 5px;
+    color: #7f7f7f;
+    }
+  }
+}
+
+a:link{
+  text-decoration: none;
+}
+.container{
+  text-align: center;
+}
+.textbox{
+  width: 300px;
+  height: 40px;
+  background-color: white;
+  box-sizing: border-box;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius : 5px;
+}
+.form__submit{
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 10pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 5px 12px;   /* 余白       */
+  background    : #7f7f7f;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #7f7f7f    /* 枠の指定 */
+}
+
+h4{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

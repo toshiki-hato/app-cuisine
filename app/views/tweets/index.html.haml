@@ -4,5 +4,6 @@
   .Signin
     - if user_signed_in?
       = render "signed_main"
+      = render "introduction"
     - else 
       = render "main_chat"

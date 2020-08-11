@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :search]
 
   def index
-    @tweets = Tweet.includes(:user)
+    @tweets = Tweet.includes(:user).order("RAND()").limit(12)
   end
 
   def new
