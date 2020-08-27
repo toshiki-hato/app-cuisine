@@ -65,6 +65,4 @@ ActiveRecord::Schema.define(version: 2020_08_27_020337) do
 
   add_foreign_key "blogs", "tweets"
   add_foreign_key "blogs", "users"
-  add_foreign_key "likes", "tweets"
-  add_foreign_key "likes", "users"
 end
