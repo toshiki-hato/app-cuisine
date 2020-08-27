@@ -4,7 +4,6 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.includes(:user).order("RAND()").limit(12)
-    @tweets = Tweet.all
   end
 
   def new
