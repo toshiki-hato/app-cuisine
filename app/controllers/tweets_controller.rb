@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :search]
 
   def index
-    @tweets = Tweet.includes(:user).order("RAND()").limit(12)
+    @tweets = Tweet.includes(:user).order("RAND()").limit(9)
     @all_ranks = Tweet.find(Like.group(:tweet_id).order('count(tweet_id) desc').limit(3).pluck(:tweet_id))
   end
 

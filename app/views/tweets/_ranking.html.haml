@@ -1,0 +1,17 @@
+.rank
+  .ranking
+    .ranking-title
+      ランキング
+    .ranking-content
+      - @all_ranks.each.with_index(1) do |tweet, i|
+        .sd
+          .ranking-number
+            第
+            = i
+            位
+          = link_to tweet_path(tweet.id) ,class: "article-link" do
+            = image_tag tweet.image.url,class: "article-uplord-image"
+            %br/
+            .article-title
+              = tweet.title
+

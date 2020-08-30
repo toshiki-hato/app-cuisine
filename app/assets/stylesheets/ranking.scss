@@ -1,0 +1,28 @@
+.rank{
+  height: 400px;
+}
+.ranking{
+  color: #7f7f7f;
+  background-color: white;
+  margin: 5px 80px 0px 80px;
+  padding: 40px 80px 60px 80px;
+}
+
+.ranking-title{
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.ranking-number{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.ranking-content{
+  display: flex;
+  justify-content: space-between;
+  margin:  0px 80px 0px 80px;
+}
+.sd{
+  width: 25%;
+  height: 200px;
+}
