@@ -1,17 +1,9 @@
-- @all_ranks.each.with_index(1) do |tweet, i|
-  = tweet.title
-  = image_tag tweet.image.url
-  第
-  = i
-  位
-
-
 .wrapper
   = render "title_bar"
   = render "search-box"
   .Signin
     - if user_signed_in?
       = render "signed_main"
-      = render "introduction"
+      = render "ranking"
     - else 
       = render "main_chat"
