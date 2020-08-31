@@ -12,18 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_08_27_020337) do
 
-  create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
-    t.datetime "start_time"
-    t.bigint "user_id"
-    t.bigint "tweet_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["tweet_id"], name: "index_blogs_on_tweet_id"
-    t.index ["user_id"], name: "index_blogs_on_user_id"
-  end
-
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
     t.integer "tweet_id"
@@ -63,6 +51,4 @@ ActiveRecord::Schema.define(version: 2020_08_27_020337) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "blogs", "tweets"
-  add_foreign_key "blogs", "users"
 end
