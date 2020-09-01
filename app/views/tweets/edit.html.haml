@@ -1,9 +1,24 @@
-.contents.row
-  .container
+.wrapper
+  = render "title_bar"
+  .tweet-new
     = form_with(model: @tweet, local: true) do |form|
-      %h3 編集する
-      = form.text_field :title, placeholder: "title"
-      = form.file_field :image
-      = form.hidden_field :image_cache # 後述
-      = form.text_area :text, placeholder: "text", rows: "10"
+      %h1 編集フォーム
+      .Form-title
+        %p
+        タイトル
+        %br/
+        = form.text_field :title, placeholder: "title",class: "title-post"
+      -# = form.label :image
+      .Form-image
+        %h2
+        画像アップロード
+        %br/
+        = form.file_field :image,class: "image-post"
+        = form.hidden_field :image_cache
+      .Form-text
+        %h2
+        テキスト
+        %br/
+        = form.text_area :text, placeholder: "text", rows: "10",class: "text-post"
+      .Form-send
       = form.submit "SEND"

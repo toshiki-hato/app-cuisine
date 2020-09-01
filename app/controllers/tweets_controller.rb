@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:edit, :show]
-  before_action :move_to_index, except: [:index, :show, :search]
+  before_action :move_to_index, except: [:index, :show, :search, :new]
 
   def index
     @tweets = Tweet.includes(:user).order("RAND()").limit(9)
@@ -9,14 +9,17 @@ class TweetsController < ApplicationController
 
   def new
     @tweet = Tweet.new
+    # flash.now[:alert] = '記事を投稿をしてください。'
   end
 
   def create
     Tweet.create(tweet_params)
+    redirect_to root_url, notice: '投稿が完了しました。'
   end
 
   def destroy
     tweet = Tweet.find(params[:id])
+    redirect_to root_url, notice: '削除が完了しました。'
     tweet.destroy
   end
 
@@ -26,6 +29,7 @@ class TweetsController < ApplicationController
   def update
     tweet = Tweet.find(params[:id])
     tweet.update(tweet_params)
+    redirect_to root_url, notice: '編集が完了しました。'
   end
 
   def show
