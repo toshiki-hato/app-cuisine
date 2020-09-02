@@ -62,10 +62,10 @@ gem 'font-awesome-sass'
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'jquery-rails'
-# 開発環境、テスト環境
-group :development, :test do 
-  gem 'sqlite3' # sqlite3
-end
+# # 開発環境、テスト環境
+# group :development, :test do 
+#   gem 'sqlite3' # sqlite3
+# end
 
 # 本番環境
 group :production do 
