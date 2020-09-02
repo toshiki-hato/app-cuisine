@@ -4,8 +4,10 @@
       .cp_cssslider
         %input#photo1{:checked => "checked", :name => "cp_switch", :type => "radio"}/
         %label{:for => "photo1"}
-          %img{:src => "/assets/img1.jpg"}/
-        %img{:src => "/assets/img1.jpg"}/
+          -# %img{:src => "/assets/img1.jpg"}/
+          = image_tag asset_path("img1.jpg")
+        -# %img{:src => "/assets/img1.jpg"}/
+        = image_tag asset_path("img1.jpg")
         %input#photo2{:name => "cp_switch", :type => "radio"}/
         %label{:for => "photo2"}
           %img{:src => "/assets/img2.jpg"}/
