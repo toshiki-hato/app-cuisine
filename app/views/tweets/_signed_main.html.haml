@@ -1,15 +1,15 @@
 .Sign-in
   投稿一覧
   .images
-    -# - if @tweets.present?
-    -#   - @tweets.each do |tweet|
-    -#     .article
-    -#       = link_to tweet_path(tweet.id) ,class: "article-link" do
-    -#         = image_tag tweet.image.url,class: "article-uplord-image"
-    -#         %br/
-    -#         .article-title
-    -#           = tweet.title
-    -# - else
-    -#   まだありません。
+    - if @tweets.present?
+      - @tweets.each do |tweet|
+        .article
+          = link_to tweet_path(tweet.id) ,class: "article-link" do
+            = image_tag tweet.image.url,class: "article-uplord-image"
+            %br/
+            .article-title
+              = tweet.title
+    - else
+      まだありません。
   .note-1
     最大９つの記事がランダムで表示されます。

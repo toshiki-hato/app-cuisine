@@ -69,5 +69,5 @@ gem 'jquery-rails'
 
 # 本番環境
 group :production do 
-  gem 'pg' # PostgreSQL
+  gem 'pg', group: :production
 end
