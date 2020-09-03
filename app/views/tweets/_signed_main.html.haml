@@ -5,7 +5,7 @@
       - @tweets.each do |tweet|
         .article
           = link_to tweet_path(tweet.id) ,class: "article-link" do
-            = image_tag tweet.image.url,class: "article-uplord-image"
+            -# = image_tag tweet.image.url,class: "article-uplord-image"
             %br/
             .article-title
               = tweet.title
