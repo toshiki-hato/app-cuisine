@@ -6,7 +6,7 @@
       = image_tag @tweet.image.url,class: "Tweet-show-img"
     %br
     .Tweet-show-text
-      = @tweet.text
+      = simple_format(@tweet.text)
     - if user_signed_in? && current_user.id == @tweet.user_id
       .more
         %ul.more_list
