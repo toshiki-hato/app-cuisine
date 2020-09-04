@@ -64,9 +64,9 @@ gem 'erb2haml'
 gem 'jquery-rails'
 gem 'sassc'
 # # 開発環境、テスト環境
-# group :development, :test do 
-#   gem 'sqlite3' # sqlite3
-# end
+group :development, :test do 
+  gem 'sqlite3' # sqlite3
+end
 
 # 本番環境
 group :production do 
