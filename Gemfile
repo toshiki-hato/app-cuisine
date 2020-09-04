@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.5'
+ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
@@ -62,6 +62,7 @@ gem 'font-awesome-sass'
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'jquery-rails'
+gem 'sassc'
 # # 開発環境、テスト環境
 # group :development, :test do 
 #   gem 'sqlite3' # sqlite3
