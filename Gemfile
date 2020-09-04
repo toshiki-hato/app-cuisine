@@ -71,3 +71,6 @@ gem 'jquery-rails'
 group :production do 
   gem 'pg', group: :production
 end
+
+gem 'rmagick'
+gem 'fog-aws'
