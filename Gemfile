@@ -67,7 +67,7 @@ gem 'jquery-rails'
 #   gem 'sqlite3' # sqlite3
 # end
 
-本番環境
+# 本番環境
 group :production do 
   gem 'pg', group: :production
 end
