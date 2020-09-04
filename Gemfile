@@ -68,8 +68,9 @@ gem 'jquery-rails'
 # end
 
 # 本番環境
-group :production do 
-  gem 'pg', group: :production
-end
+# group :production do 
+#   gem 'pg', group: :production
+
+# end
 gem 'fog-aws'
 gem 'rmagick'
