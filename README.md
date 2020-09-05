@@ -24,6 +24,7 @@ Things you may want to cover:
 * ... -->
 
 # cuisine DB設計
+
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -33,6 +34,7 @@ Things you may want to cover:
 ### Association
 - has_many :tweets
 - has_many :comments
+- has_many :likes
 ## tweetsテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -43,14 +45,15 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - has_many :comments
-## calendersテーブル
+- has_many :likes
+## likesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |date|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |tweet_id|integer|null: false, foreign_key: true|
 ### Association
-- has_many :tweets
+- belongs_to :tweet
 - belongs_to :user
 
 ## commentsテーブル
