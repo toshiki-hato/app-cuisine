@@ -1,27 +1,51 @@
 # README
-<!-- 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## アプリ名
 
-* Ruby version
+cuisine
 
-* System dependencies
+サイトのイメージ
 
-* Configuration
+<!-- 画像投稿予定 -->
 
-* Database creation
+## App URL
 
-* Database initialization
+url予定
 
-* How to run the test suite
+ユーザー名/ sample
+Eメール/ sample@sample.com
+パスワード/ 55113334
+新規登録も可能ですがこちらをご利用頂けたら幸いです。
 
-* Services (job queues, cache servers, search engines, etc.)
+##  概要
 
-* Deployment instructions
+簡易料理投稿アプリになります。
 
-* ... -->
+
+##  使用方法
+
+①上記のテスト用ユーザーでログイン
+※ログインできない場合は新規で登録ください。
+
+##  課題や今後実装したい機能
+
+カレンダー機能を追加し投稿した記事をカレンダーの予定に追加できるようにしたい。
+料理動画投稿機能の追加
+
+
+## 工夫したポイント
+
+✳︎投稿フォームで画像をアップロードする上でCarrierWaveを使用した。
+デプロイの際にherokuのストレージだけでは画像の保存が少量しかできない為、
+AWSのS3を使用した。
+
+✳︎いいね機能を実装、いいねの数の多い順(上位３位)をランキング表示させました。
+
+※投稿詳細内にメッセージ機能を入れましたがAjaxを用いて非同期通信を行いました。
+
+## 使用技術(開発環境)
+
+VSCode,HTML/CSS, Ruby, Ruby on Rails, JavaScript, jquery, AWS, Heroku
 
 # cuisine DB設計
 
