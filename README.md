@@ -54,14 +54,14 @@ AWSのS3を使用した。<br>
 
 ## 使用技術(開発環境)
 
-# フロントエンド
+## フロントエンド
  ・Html,css<br>
  ・JavaScript<br>
-# サーバーサイド
+## サーバーサイド
  ・Ruby<br>
  ・Ruby on Rails<br>
 
-# インフラ
+## インフラ
  ・Mysql<br>
  ・Heroku<br>
  ・Aws<br>
