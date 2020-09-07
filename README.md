@@ -5,7 +5,9 @@
 cuisine<br>
 
 
-![readme](https://user-images.githubusercontent.com/66351093/92342008-7eea5c80-f0fa-11ea-8138-fa72e4caa790.jpg)
+![readme](https://user-images.githubusercontent.com/66351093/92342008-7eea5c80-f0fa-11ea-8138-fa72e4caa790.jpg)<br>
+
+![image](https://user-images.githubusercontent.com/66351093/92345434-3fc10900-f104-11ea-9bf7-69ba795fc33a.png)
 
 
 ## App URL
@@ -23,13 +25,15 @@ Eメール/ sample@sample.com<br>
 
 開発目的は作った料理を共有することです。<br>
 
-一人暮らしを始められた方が自炊を試みたが料理のネタがなくなった時に使用して欲しいと思い、こちらを作成しました。<br>
+一人暮らしを始められた方が自炊を試みたが料理のレパートリーがなくなった時に使用して欲しいと思い、こちらを作成しました。<br>
 
 
 
-##  使用方法
+##  本番環境
 
-①上記のテスト用ユーザーでログイン<br>
+デプロイ先:Heroku<br>
+
+上記のテスト用ユーザーでログイン<br>
 ※ログインできない場合は新規で登録ください。
 
 ##  課題や今後実装したい機能
@@ -50,7 +54,18 @@ AWSのS3を使用した。<br>
 
 ## 使用技術(開発環境)
 
-VSCode,HTML/CSS, Ruby, Ruby on Rails, JavaScript, jquery, AWS, Heroku
+# フロントエンド
+ ・Html,css<br>
+ ・JavaScript<br>
+# サーバーサイド
+ ・Ruby<br>
+ ・Ruby on Rails<br>
+
+# インフラ
+ ・Mysql<br>
+ ・Heroku<br>
+ ・Aws<br>
+  ・S3<br>
 
 # cuisine DB設計
 
