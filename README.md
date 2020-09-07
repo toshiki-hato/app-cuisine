@@ -5,7 +5,7 @@
 cuisine<br>
 
 
-![画像の説明](images/readme.jpg)<br>
+![画像の説明](readme.jpg)
 
 ## App URL
 
