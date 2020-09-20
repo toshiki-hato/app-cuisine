@@ -4,8 +4,6 @@ class UsersController < ApplicationController
     @nickname = current_user.nickname
     @tweets = current_user.tweets
   end
-  # def edit
-  # end
 
   # def update
   #   if current_user.update(user_params)
